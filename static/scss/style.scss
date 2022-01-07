@@ -1,0 +1,336 @@
+@import "variables";
+@import "reset";
+
+body {
+  background-color: $color_background;
+}
+
+.container {
+  padding: 1rem;
+  // width: $Mobile;
+  // width: $Tab;
+  max-width: $Desktop-S;
+  background-color: white;
+  margin: auto;
+}
+
+.botter-bottom {
+  border-radius: 0 0 10px 10px;
+}
+
+// @media media type and (condition: breakpoint) {}
+// @media screen and (max-width: 480px) {}
+
+nav {
+  background-color: white;
+
+  form {
+    margin-top: 1rem;
+    border: $blue 3px solid;
+    border-radius: 30px;
+    padding: 0 20px;
+
+    input {
+      width: 90%;
+    }
+
+    ._form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      label {
+        font: $font_h;
+      }
+      input {
+        background: transparent;
+        font: $font_p;
+      }
+
+      input[type="button"],
+      input[type="submit"],
+      input[type="reset"] {
+        border: none;
+        font: $font_h;
+        padding: 0.75rem 1.5rem;
+      }
+    }
+
+    .search-btn {
+      background-color: transparent;
+      i {
+        font-size: 1rem;
+        color: $blue;
+        padding: 0.5rem 0;
+      }
+    }
+  }
+  .nav-action {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    i {
+      font-size: 1.15rem;
+      color: $abbey;
+      padding: 1rem;
+    }
+    i:hover {
+      color: $blue;
+    }
+    img {
+      width: 35px;
+      height: 35px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+}
+
+main {
+  @extend .container;
+  margin-top: 1rem;
+  border-radius: 10px;
+
+  .progress-steps {
+    display: flex;
+    justify-content: space-around;
+    li {
+      $h-w: 35px;
+      border-radius: 50%;
+      width: $h-w;
+      height: $h-w;
+      background-color: #837c7c;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    i {
+      color: white;
+    }
+    .active {
+      background-color: $blue;
+    }
+    .common {
+      position: absolute;
+      display: block;
+      font: $font_h;
+      // bottom: -10px;
+      font-size: 0.8rem;
+      white-space: nowrap;
+      padding-top: 1rem;
+      color: rgb(83, 83, 83);
+    }
+    li .fa-address-book::after {
+      content: "Project form";
+      @extend .common;
+      left: -50%;
+      color: $blue;
+    }
+    li .fa-file-code::after {
+      content: "Amenties";
+      @extend .common;
+      left: -20%;
+    }
+    li .fa-percentage::after {
+      content: "Tax";
+      @extend .common;
+      left: 8px;
+    }
+    li .fa-dollar-sign::after {
+      content: "Charges";
+      @extend .common;
+      left: -0%;
+    }
+  }
+
+  ._form {
+    @extend ._form;
+
+    margin: 3rem 0 2rem;
+    h2 {
+      font: $font_h;
+      color: $blue;
+      margin-bottom: 1rem;
+    }
+    label {
+      color: $color_heading;
+      margin-top: 1rem;
+      font: $font_h;
+      font-size: 0.9rem;
+    }
+    input {
+      border: 2px solid #eaeaea;
+      width: calc(100% - 3.5rem);
+      border-radius: 5px;
+      margin: 1rem 0;
+      display: flex;
+      flex-direction: column;
+    }
+    #upload-file {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      border: 2px solid #eaeaea;
+      padding: 2rem 0;
+      cursor: pointer;
+      border-radius: 5px;
+
+      i {
+        color: #a6a6a6;
+        font-size: 5rem;
+        &:hover {
+          color: $blue;
+        }
+      }
+      p {
+        background-color: $blue;
+        color: white;
+        padding: 0.5rem 1rem;
+        margin-top: 1.5rem;
+        border-radius: 5px;
+      }
+    }
+    input[type="date"] {
+      text-transform: uppercase;
+      font: $font_h;
+      font-size: 0.9rem;
+    }
+
+    .sub-section {
+      border: 2px solid #eaeaea;
+      padding: 1rem;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.sidebar {
+  @extend .container;
+  margin-top: 1rem;
+  border-radius: 10px 10px 0 0;
+
+  .sidebar-action {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    i {
+      font-size: 1.15rem;
+      color: $abbey;
+      padding: 1.2rem;
+    }
+    img {
+      width: 35px;
+      height: 35px;
+      object-fit: cover;
+    }
+    .action-i {
+      display: flex;
+      align-items: center;
+    }
+
+    i:hover {
+      color: $blue;
+    }
+    .fa-user {
+      padding-left: 2rem;
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: $Tab) {
+  @media screen and (max-width: $Desktop-S) {
+    .container {
+      $margin: 2rem;
+      margin-left: $margin;
+      margin-right: $margin;
+    }
+  }
+}
+@media screen and (min-width: $Desktop-S) {
+  .column {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .sub-column {
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      .row {
+        // width: 90%;
+        display: flex;
+        justify-content: space-between;
+        .input {
+          width: 48%;
+        }
+      }
+    }
+    .sub-column_ {
+      width: 25%;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+
+    form {
+      margin-top: 0;
+    }
+
+    .nav-action {
+      width: 50%;
+      justify-content: end;
+      flex-direction: row-reverse;
+      margin: 0;
+      .action-i {
+        padding-right: 1rem;
+      }
+    }
+    .search-form {
+      width: 40%;
+    }
+  }
+  @media screen and (min-width: 1300px) {
+    .sidebar {
+      border-radius: 0 10px 10px 0;
+      margin-top: 2rem;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      .sidebar-action {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 88vh;
+        max-height: 700px;
+        .action-i {
+          flex-direction: column;
+          .fa-user {
+            padding: 2rem 1rem;
+            display: block;
+          }
+          .avatar {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+._form {
+  input:focus {
+    border-color: $blue;
+  }
+}

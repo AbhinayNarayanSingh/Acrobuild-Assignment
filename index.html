@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fontawsome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="./static/css/style.css" />
+
+    <title>Acrobuild Assignment</title>
+  </head>
+
+  <body>
+    <header class="container botter-bottom">
+      <nav>
+        <div class="nav-action">
+          <img src="./static/img/profile-img.jpg" />
+          <div class="action-i">
+            <i class="fas fa-plus"></i>
+            <i class="far fa-bell"></i>
+          </div>
+        </div>
+
+        <div class="search-form">
+          <form action="" class="_form">
+            <button class="search-btn" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+            <input
+              type="search"
+              name="search"
+              required
+              placeholder="Search..."
+            />
+          </form>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="tabs">
+        <ul class="progress-steps">
+          <li class="active"><i class="far fa-address-book"></i></li>
+          <li><i class="far fa-file-code"></i></li>
+          <li><i class="fas fa-percentage"></i></li>
+          <li><i class="fas fa-dollar-sign"></i></li>
+        </ul>
+      </div>
+
+      <form action="" class="_form">
+        <div class="sub-section">
+          <h2>Basic Details</h2>
+
+          <div class="column">
+            <div class="sub-column">
+              <div class="row">
+                <div class="input">
+                  <label for="p-name">Project Name</label>
+                  <input type="text" name="p-name" id="p-name" />
+                </div>
+                <div class="input">
+                  <label for="p-code">Project Code</label>
+                  <input type="text" name="p-code" id="p-code" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="input">
+                  <label for="p-s-d">Project Start Date</label>
+                  <input type="date" name="p-s-d" id="p-s-d" />
+                </div>
+                <div class="input">
+                  <label for="p-e-d">Project End Date</label>
+                  <input type="date" name="p-e-d" id="p-e-d" />
+                </div>
+              </div>
+            </div>
+            <div class="sub-column_">
+              <div class="input">
+                <label for="logo" id="upload-file">
+                  <i class="fas fa-cloud-upload-alt"></i>
+                  <p>Upload Project Logo</p>
+                </label>
+                <input
+                  type="file"
+                  name="logo"
+                  id="logo"
+                  style="display: none"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-section">
+          <h2>Project Details</h2>
+          <div class="column">
+            <div class="sub-column">
+              <div class="row">
+                <div class="input">
+                  <label for="longitude">Longitude</label>
+                  <input type="text" name="longitude" id="longitude" />
+                </div>
+
+                <div class="input">
+                  <label for="latitude">Latitude</label>
+                  <input type="text" name="latitude" id="latitude" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <section class="sidebar">
+      <div class="sidebar-action">
+        <div class="action-i">
+          <img src="./static/img/profile-img.jpg" class="avatar" />
+          <i class="fas fa-user"></i>
+          <i class="fas fa-bullhorn"></i>
+        </div>
+        <i class="fas fa-sign-out-alt"></i>
+      </div>
+    </section>
+  </body>
+</html>

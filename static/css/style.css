@@ -1,0 +1,618 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+a,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+button,
+textarea,
+input,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1rem;
+  color: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #2a2a2a;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  padding: 0.75rem 1.5rem;
+  /* padding property add space inside the input field*/
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  /*:focus selector to do something with the input field when it gets focus*/
+  outline: none;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  color: white;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.success, .error {
+  font-family: "Poppins", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem auto;
+  width: 100%;
+  text-align: center;
+  line-height: normal;
+  color: #00ca00;
+  background-color: #eceaea;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.error {
+  color: red;
+  background: #ffe4e6;
+}
+
+.error li {
+  color: red;
+}
+
+.hide {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  background-color: #edf5fa;
+}
+
+.container, main, .sidebar {
+  padding: 1rem;
+  max-width: 1024px;
+  background-color: white;
+  margin: auto;
+}
+
+.botter-bottom {
+  border-radius: 0 0 10px 10px;
+}
+
+nav {
+  background-color: white;
+}
+
+nav form {
+  margin-top: 1rem;
+  border: #3b9ad5 3px solid;
+  border-radius: 30px;
+  padding: 0 20px;
+}
+
+nav form input {
+  width: 90%;
+}
+
+nav form ._form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav form ._form label {
+  font: 500 1rem/150% "Source Sans Pro", sans-serif;
+}
+
+nav form ._form input {
+  background: transparent;
+  font: 400 1rem/125% "Source Sans Pro", sans-serif;
+}
+
+nav form ._form input[type="button"],
+nav form ._form input[type="submit"],
+nav form ._form input[type="reset"] {
+  border: none;
+  font: 500 1rem/150% "Source Sans Pro", sans-serif;
+  padding: 0.75rem 1.5rem;
+}
+
+nav form .search-btn {
+  background-color: transparent;
+}
+
+nav form .search-btn i {
+  font-size: 1rem;
+  color: #3b9ad5;
+  padding: 0.5rem 0;
+}
+
+nav .nav-action {
+  width: 95%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+nav .nav-action i {
+  font-size: 1.15rem;
+  color: #44474b;
+  padding: 1rem;
+}
+
+nav .nav-action i:hover {
+  color: #3b9ad5;
+}
+
+nav .nav-action img {
+  width: 35px;
+  height: 35px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+main {
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+main .progress-steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .progress-steps li {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  background-color: #837c7c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+main .progress-steps i {
+  color: white;
+}
+
+main .progress-steps .active {
+  background-color: #3b9ad5;
+}
+
+main .progress-steps .common, main .progress-steps li .fa-address-book::after, main .progress-steps li .fa-file-code::after, main .progress-steps li .fa-percentage::after, main .progress-steps li .fa-dollar-sign::after {
+  position: absolute;
+  display: block;
+  font: 500 1rem/150% "Source Sans Pro", sans-serif;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  padding-top: 1rem;
+  color: #535353;
+}
+
+main .progress-steps li .fa-address-book::after {
+  content: "Project form";
+  left: -50%;
+  color: #3b9ad5;
+}
+
+main .progress-steps li .fa-file-code::after {
+  content: "Amenties";
+  left: -20%;
+}
+
+main .progress-steps li .fa-percentage::after {
+  content: "Tax";
+  left: 8px;
+}
+
+main .progress-steps li .fa-dollar-sign::after {
+  content: "Charges";
+  left: -0%;
+}
+
+main ._form {
+  margin: 3rem 0 2rem;
+}
+
+main ._form h2 {
+  font: 500 1rem/150% "Source Sans Pro", sans-serif;
+  color: #3b9ad5;
+  margin-bottom: 1rem;
+}
+
+main ._form label {
+  color: #2b2b2b;
+  margin-top: 1rem;
+  font: 500 1rem/150% "Source Sans Pro", sans-serif;
+  font-size: 0.9rem;
+}
+
+main ._form input {
+  border: 2px solid #eaeaea;
+  width: calc(100% - 3.5rem);
+  border-radius: 5px;
+  margin: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main ._form #upload-file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid #eaeaea;
+  padding: 2rem 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+main ._form #upload-file i {
+  color: #a6a6a6;
+  font-size: 5rem;
+}
+
+main ._form #upload-file i:hover {
+  color: #3b9ad5;
+}
+
+main ._form #upload-file p {
+  background-color: #3b9ad5;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+}
+
+main ._form input[type="date"] {
+  text-transform: uppercase;
+  font: 500 1rem/150% "Source Sans Pro", sans-serif;
+  font-size: 0.9rem;
+}
+
+main ._form .sub-section {
+  border: 2px solid #eaeaea;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.sidebar {
+  margin-top: 1rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.sidebar .sidebar-action {
+  width: 95%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+}
+
+.sidebar .sidebar-action i {
+  font-size: 1.15rem;
+  color: #44474b;
+  padding: 1.2rem;
+}
+
+.sidebar .sidebar-action img {
+  width: 35px;
+  height: 35px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sidebar .sidebar-action .action-i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar .sidebar-action i:hover {
+  color: #3b9ad5;
+}
+
+.sidebar .sidebar-action .fa-user {
+  padding-left: 2rem;
+  display: block;
+}
+
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+  .container, main, .sidebar {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .column .sub-column {
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .column .sub-column .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .column .sub-column .row .input {
+    width: 48%;
+  }
+  .column .sub-column_ {
+    width: 25%;
+  }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  nav form {
+    margin-top: 0;
+  }
+  nav .nav-action {
+    width: 50%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    margin: 0;
+  }
+  nav .nav-action .action-i {
+    padding-right: 1rem;
+  }
+  nav .search-form {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1300px) {
+  .sidebar {
+    border-radius: 0 10px 10px 0;
+    margin-top: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .sidebar .sidebar-action {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 88vh;
+    max-height: 700px;
+  }
+  .sidebar .sidebar-action .action-i {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .sidebar .sidebar-action .action-i .fa-user {
+    padding: 2rem 1rem;
+    display: block;
+  }
+  .sidebar .sidebar-action .action-i .avatar {
+    margin-top: 1rem;
+  }
+}
+
+._form input:focus {
+  border-color: #3b9ad5;
+}
